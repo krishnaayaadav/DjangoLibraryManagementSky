@@ -1,0 +1,96 @@
+{% extends "emp_app/base.html" %}
+{% load employees_tags %}
+{% load static %}
+
+{% block title %}
+Home page
+{% endblock title %}
+
+{% block css_link %}
+ <link rel="stylesheet" href="{% static 'emp_app/css/home_style.css' %}">
+ {% endblock css_link %}
+
+
+{% block main_content %}
+
+<h2 class="hdr" >
+    Employee Management System </h2>
+</div>
+
+<div class="additional">
+
+  {% search_form %}
+
+   <button class="btn" id="newemp"><a href="{% url 'addEmployees'  %}">Add New</a></button>
+   
+
+   <div class="dropdown">
+       <button class="dropbtn">Filters</button>
+       <div class="dropdown-content">
+           <a href="{% url 'details' 'recent' %}">Recent Post</a>
+           <a href="{% url 'details' 'max' %}">Maximum Salary</a>
+           <a href="{% url 'details' 'min'  %} ">Minimum Salary</a>
+           <a href="{% url 'details' 'all'  %} ">All Data</a>
+       </div>
+   </div>
+
+       <!----- MSG Framework for messaging ----->
+        {% if messages %}
+            {% for message in messages %}
+
+                {% if message.tags %}
+                <p class='center' ><strong> {{message}}</strong></p>
+                {% endif %}
+
+            {% endfor %}
+
+        {% endif %}
+
+</div>
+
+<div style="overflow-x: auto;">
+
+    <table>
+        <tr >
+            <th>Id</th>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Department</th>
+            <th>Email</th>
+            <th>Joining Date</th>
+            <th>Actions</th>
+        </tr>
+
+        <!----- Td Data here ------>
+        <tr>
+            {% for emp in page_obj %}
+                <tr class="trhvr">
+                <td>{{emp.id}}</td>
+                <td><img class="userimg" src="{{emp.image.url}}" alt=""></td>
+                <td>{{emp.name}}</a> </td>
+                <td>{{emp.salary}}</td>
+                <td><a href="{% url 'details'  emp.dept %}">{{emp.dept}}</a></td>
+                <td>{{emp.email}}</td>
+                <td>{{emp.join_date}}</td>
+
+                <!---- update and delete buttons ----->
+                <td class='actionbtn'>
+                        <a href="{% url 'update_employee' emp.id %}">Update</a>
+                        <a class='delete' href="{% url 'deleteEmployee' emp.id %}">Delete</a>
+                    </button>
+                </td>
+            
+                </tr>
+
+            {% endfor  %}
+        </tr>
+        
+    </table>
+
+
+</div>
+
+    {% include 'emp_app/pagination.html' %}
+
+{% endblock main_content  %}

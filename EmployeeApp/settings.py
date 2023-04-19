@@ -28,7 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',  # rest-framework installed her
-    'employees_app', # employee -app here
+    'employee_app', # employee -app here
     'corsheaders',              # django cors-header
     
 ]

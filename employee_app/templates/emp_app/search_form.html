@@ -1,0 +1,10 @@
+<form action="{% url 'employeesFilter' %}">
+   {% if form %}
+     {{form.query}}
+  {% else %}
+
+  No form
+
+  {% endif %}
+
+  </form>
