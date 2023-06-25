@@ -1,5 +1,6 @@
 # office-employee management system with-restful-api
 
-![emp](https://user-images.githubusercontent.com/123397686/233511457-37c18b16-8ae6-478e-9692-dea7a0e9304b.jpg)
+![employee_api](https://github.com/krishnapb01/employee-restful-api/assets/123397686/7383d6a6-6ae3-41ec-a4d8-425edf8329d2)
+
 
 Live demo api: http://employeesapi.pythonanywhere.com/
