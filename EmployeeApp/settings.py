@@ -27,10 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',  # rest-framework installed her
-    'my_app',
-    'corsheaders',              # django cors-header
-    
+    'my_app', # my app 
 ]
 
 MIDDLEWARE = [

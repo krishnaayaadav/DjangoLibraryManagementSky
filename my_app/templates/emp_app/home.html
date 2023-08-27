@@ -34,7 +34,6 @@ Home page
         
     </div>
 
-   <button class="btn" id="newemp"><a href="">GET API</a></button>
 
 
        <!----- MSG Framework for messaging ----->
@@ -42,7 +41,7 @@ Home page
             {% for message in messages %}
 
                 {% if message.tags %}
-                <p class='center' ><strong> {{message}}</strong></p>
+                <p class="{{ message.tags}}" ><strong> {{message}}</strong></p>
                 {% endif %}
 
             {% endfor %}
