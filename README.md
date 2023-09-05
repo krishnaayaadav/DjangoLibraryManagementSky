@@ -1,6 +1,6 @@
-# office-employee management system with-restful-api
+#Employees Management Django App
 
-![employee_api](https://github.com/krishnapb01/employee-restful-api/assets/123397686/7383d6a6-6ae3-41ec-a4d8-425edf8329d2)
-
+![employee-app-gif](https://github.com/krishnasky821/DjangoLibraryManagementSky/assets/123397686/ea2d863a-f77a-4d3d-8736-2872c115df9e)
 
 Live demo api: http://employeesapi.pythonanywhere.com/
+![l3](https://github.com/krishnasky821/DjangoLibraryManagementSky/assets/123397686/e4185756-aa79-473f-a73a-58be24db536a)
